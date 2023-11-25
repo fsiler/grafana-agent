@@ -110,6 +110,7 @@ func (c *Config) NewIntegration(l log.Logger) (integrations.Integration, error) 
 			MaxConns:      c.MaxOpenConnections,
 			MaxIdleConns:  c.MaxIdleConnections,
 		},
+		&[]bool{true}[0],
 	)
 
 	if err != nil {
